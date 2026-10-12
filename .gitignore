@@ -1,0 +1,12 @@
+/target
+/target-*/
+/dist
+/data
+/nets/*.nnue
+!/nets/current.nnue
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+hf_tokens.txt

@@ -1,0 +1,4 @@
+# Development builds target the local CPU (AVX2/BMI2 on this machine).
+# Release binaries for distribution will be built per-arch explicitly.
+[build]
+rustflags = ["-C", "target-cpu=native"]

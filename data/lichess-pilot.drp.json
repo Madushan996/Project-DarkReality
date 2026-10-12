@@ -1,0 +1,20 @@
+{
+  "source": "https://database.lichess.org/lichess_db_eval.jsonl.zst",
+  "source_documentation": "https://database.lichess.org/#evals",
+  "license": "CC0-1.0",
+  "labels": "Stockfish evaluations distributed by Lichess, white POV centipawns",
+  "result_semantics": "unknown; reserved[0] bit 0 means supervised score only",
+  "stats": {
+    "accepted": 2000
+  },
+  "records_sha256": "fefeb0fc52efcab521476d312d987a94e8c1bda8e861d944a93b67be8ab16dc8",
+  "created_unix": 1791313765.864231,
+  "recovery": "validated complete prefix saved by the preempted original importer; stream-end statistics unavailable",
+  "filters": {
+    "min_depth": 20,
+    "max_cp": 1500,
+    "min_pieces": 6,
+    "sample_probability": 0.5,
+    "seed": 61007
+  }
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="60" viewBox="0 0 800 60">
+  <defs>
+    <linearGradient id="left" x1="0" x2="1">
+      <stop offset="0" stop-color="#8a8a8a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#8a8a8a" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" x2="1">
+      <stop offset="0" stop-color="#8a8a8a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#8a8a8a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <mask id="crescent">
+      <rect width="800" height="60" fill="#fff"/>
+      <circle cx="405" cy="27" r="9" fill="#000"/>
+    </mask>
+    <path id="bat" d="M0,2 C-3,-2 -7,-4 -12,-2 C-9,-1 -8,1 -9,3 C-6,1 -4,2 -3,4 C-2,2 -1,2 0,3 C1,2 2,2 3,4 C4,2 6,1 9,3 C8,1 9,-1 12,-2 C7,-4 3,-2 0,2 Z M-1.6,0.5 L-1.1,-2.6 L0,-1.2 L1.1,-2.6 L1.6,0.5 Z"/>
+  </defs>
+
+  <!-- Line with a gap for the moon, like the banner's title rule -->
+  <rect x="100" y="30" width="270" height="1.2" fill="url(#left)"/>
+  <rect x="430" y="30" width="270" height="1.2" fill="url(#right)"/>
+  <circle cx="370" cy="30.6" r="1.6" fill="#8a8a8a"/>
+  <circle cx="430" cy="30.6" r="1.6" fill="#8a8a8a"/>
+
+  <!-- Pumpkin-orange crescent moon with a slow glow -->
+  <circle cx="400" cy="30" r="10" fill="#ff7518" mask="url(#crescent)" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.35;0.9;0.35" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="30" r="10" fill="#ff7518" mask="url(#crescent)"/>
+
+  <!-- Bats crossing the line -->
+  <g fill="#6e6e6e">
+    <g>
+      <animateMotion dur="11s" repeatCount="indefinite" path="M-30,40 C180,8 330,52 520,18 S760,30 840,12"/>
+      <g>
+        <use href="#bat"/>
+        <animateTransform attributeName="transform" type="scale" values="1.7 1.7;1.7 0.6;1.7 1.7" dur="0.35s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g>
+      <animateMotion dur="15s" begin="-6s" repeatCount="indefinite" path="M840,22 C640,48 520,6 360,26 S120,10 -30,34"/>
+      <g transform="scale(1.2)">
+        <use href="#bat"/>
+        <animateTransform attributeName="transform" type="scale" values="1.2 1.2;1.2 0.45;1.2 1.2" dur="0.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+</svg>

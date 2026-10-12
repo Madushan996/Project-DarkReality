@@ -1,0 +1,12 @@
+[package]
+name = "darkreality"
+version = "0.4.8"
+edition = "2024"
+description = "DarkReality, an original UCI chess engine"
+authors = ["Madushan Dissanayake"]
+license = "GPL-3.0-or-later"
+repository = "https://github.com/Madushan996/Project-DarkReality"
+readme = "../README.md"
+build = "build.rs"
+
+[dependencies]

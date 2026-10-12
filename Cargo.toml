@@ -1,0 +1,21 @@
+[workspace]
+members = ["engine", "tools/position-importer"]
+resolver = "3"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+# Perft-based tests are far too slow unoptimized; keep debug assertions on.
+[profile.test]
+opt-level = 3
+debug-assertions = true
+
+# The build script searches for magic numbers; run it optimized.
+[profile.dev.build-override]
+opt-level = 3
+
+[profile.release.build-override]
+opt-level = 3
